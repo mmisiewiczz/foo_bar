@@ -3,14 +3,17 @@
 int main() {
     for (int i = 1; i <= 200; i++) {
         if (i % 5 == 0 && i % 7 == 0) {
-            printf("FooBar\n");
+            printf("%-6s", "FooBar");
         } else if (i % 5 == 0) {
-            printf("Foo\n");
+            printf("%-6s", "Foo");
         } else if (i % 7 == 0) {
-            printf("Bar\n");
+            printf("%-6s", "Bar");
         } else {
-            printf("%d\n", i);
+            printf("%-6d", i);
         }
+        if (i % 10 == 0) {
+            printf("\n");
+        }        
     }
     return 0;
 }
